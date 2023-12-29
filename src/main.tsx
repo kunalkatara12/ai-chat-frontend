@@ -9,7 +9,7 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 // axios.defaults.baseURL = "http://localhost:1209/api/v1/";
-// axios.defaults.baseURL = "https://ai-chatbackend.onrender.com/api/v1/";
+axios.defaults.baseURL = "https://ai-chatbackend.onrender.com/api/v1/";
 axios.defaults.withCredentials = true;
 const theme = createTheme({
   typography: {
