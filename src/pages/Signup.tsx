@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { IoIosLogIn, IoLogoGoogle } from "react-icons/io";
+import { IoIosLogIn } from "react-icons/io";
 import { Box, Typography, Button } from "@mui/material";
 import CustomizedInput from "../components/shared/CustomizedInput";
 import { toast } from "react-hot-toast";
@@ -47,8 +47,11 @@ const Signup = () => {
     const decoded = jwtDecode(credentials);
     console.log(decoded);
     console.log(decoded.jti);
+    //@ts-ignore
     const name: string = decoded?.name;
+    //@ts-ignore
     const email: string = decoded?.email;
+    //@ts-ignore
     const jti: string = decoded?.jti;
     try {
       toast.loading("Signup using Google...", { id: "googleSignup" });
@@ -158,6 +161,7 @@ const Signup = () => {
             <Box className="flex justify-center">
               <GoogleLogin
                 onSuccess={responseMessage}
+                //@ts-ignore
                 onError={errorMessage}
                 className="self-center"
               ></GoogleLogin>

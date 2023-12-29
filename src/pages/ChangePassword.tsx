@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
+import { Avatar, Box, Button, TextField } from "@mui/material";
 import { useAuth } from "../context/AuthContext";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
