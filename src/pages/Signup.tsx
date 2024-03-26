@@ -23,14 +23,14 @@ const Signup = () => {
       toast.loading("Signing Up", { id: "signup" });
       await auth?.signup(name, email, password, confirmPassword);
       toast.success("Signed Up Successfully", { id: "signup" });
-    } catch (error) {
+    } catch (error: any) {
       if (password !== confirmPassword) {
         toast.error("Password and Confirm Password do not match", {
           id: "signup",
         });
       } else {
         console.log(error);
-        toast.error("Signing Up Failed", { id: "signup" });
+        toast.error(`${error?.response?.data?.message}`, { id: "signup" });
       }
     }
   };
