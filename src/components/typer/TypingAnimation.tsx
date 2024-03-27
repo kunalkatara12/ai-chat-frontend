@@ -4,11 +4,13 @@ function TypingAnimation() {
     <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed once, initially
-        "Chat With Your OWN AI",
+        "Powered by OpenAI",
         1000,
-        "Built With OpenAI 🤖",
+        "Interact with Your Personal AI",
         2000,
-        "Your Own Customized ChatGPT 💻",
+        "Tailored ChatGPT Just for You 💻",
+        1500,
+        "Discover potential with your custom ChatGPT",
         1500,
       ]}
       speed={50}
@@ -22,5 +24,4 @@ function TypingAnimation() {
     />
   );
 };
- 
 export default TypingAnimation;
